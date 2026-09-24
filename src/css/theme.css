@@ -1,0 +1,71 @@
+:root {
+  --color-bg: #f3f1fd;
+  --color-surface: #ffffff;
+  --color-border: #ececf5;
+  --color-text: #1a1d29;
+  --color-text-muted: #8891a5;
+  --color-primary: #6d5bf7;
+  --color-primary-hover: #5a48e8;
+  --color-success: #22b573;
+  --color-success-bg: #e8f9f0;
+  --color-warning: #f5a524;
+  --color-danger: #f5484d;
+  --color-danger-bg: #fdecea;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 26px;
+  --radius-xl: 32px;
+
+  --shadow-sm: 0 2px 6px rgba(30, 20, 80, 0.06);
+  --shadow-md: 0 10px 30px rgba(30, 20, 80, 0.10);
+  --shadow-lg: 0 24px 60px rgba(30, 20, 80, 0.16);
+
+  --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: linear-gradient(160deg, #eef0fd 0%, #f6eefb 45%, #eaf6f2 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+body::before {
+  width: 480px;
+  height: 480px;
+  top: -160px;
+  right: -140px;
+  background: radial-gradient(circle, #a78bfa, transparent 70%);
+}
+
+body::after {
+  width: 420px;
+  height: 420px;
+  bottom: -140px;
+  left: -120px;
+  background: radial-gradient(circle, #6ee7c9, transparent 70%);
+}
